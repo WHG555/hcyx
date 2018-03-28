@@ -1,27 +1,43 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-name: 宏沉一笑
-email: whghcyx@outlook.com
-author: M/J
-url: http://whg555.github.io
-resume_site: http://xiaokedada.com/me/
-github: https://github.com/WHG555/
-baseurl: ""  #根目录
-description: 假如生活欺骗了你，不要悲伤，不要哭泣。
-motto: 我们笑着说再见，却深知再见遥遥无期。
-#motto: 如果生活欺骗了你，不要悲伤，不要哭泣。
-banner: 我想带你去看绚丽的山峦，去看秀丽的溪谷，这份心情，人类是如何称呼的呢。
-#permalink: /:categories/:year/:month/:day/:title/
-permalink: /:year/:month/:day/:title/
-excerpt_separator:  '<!-- more -->' #文章摘要
-paginate: 8
-paginate_path: "page:num"
-gems: [jekyll-paginate]
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
-github_username: maoxiaoke
-highlighter: rouge
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Your awesome title
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
 markdown: kramdown
-FB:
-  comments :
-    provider : disqus
-    disqus :
-        short_name : xiaokedada
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
