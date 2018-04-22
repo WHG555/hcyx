@@ -2,7 +2,6 @@
 layout: post
 title: "我的第一个文章"
 date: 2018-03-30 22:50:43
-categories: jekyll update
 ---
 #每一篇文章#
 经过了好久终于装好了这个个人的网站，还去熬夜了一晚上。说实话，这个方式还是很难的。而且makrdown还是不怎么熟练。
