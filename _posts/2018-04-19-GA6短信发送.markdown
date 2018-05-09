@@ -11,23 +11,23 @@ tags: 短信
 ###AT测试  
 发送  
 
-	AT\r
+	AT\r  
 结果   
 
-	OK 
+	OK  
 ###卡测试  
-发送
+发送  
 
-	AT+CPIN?\r
-结果 
+	AT+CPIN?\r  
+结果  
 
 	+CPIN:READY  
 
 	OK  
-###网络质量测试 
+###网络质量测试   
 发送  
 
-	AT+CSQ\r
+	AT+CSQ\r  
 结果  
  
 	+CSQ: 31,99  
