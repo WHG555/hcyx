@@ -66,16 +66,16 @@ Lisp 是一门很强大，很简洁，易学的语言，我们将通过学习它
 	int main(int argc, char** argv) 
 	{
 
-    	puts("Lispy Version 0.1");
-    	puts("Press Ctrl+c to Exit\n");
+        puts("Lispy Version 0.1");
+        puts("Press Ctrl+c to Exit\n");
 
-    	while (1) 
-		{
-    		fputs("lispy> ", stdout);
-    		fgets(input, 2048, stdin);
-    		printf("No you're a %s", input);
-    	} 
-    	return 0;
+        while (1) 
+	    {
+            fputs("lispy> ", stdout);
+            fgets(input, 2048, stdin);
+	        printf("No you're a %s", input);
+        } 
+        return 0;
 	}
 
 编写完毕后保存退出：
@@ -93,8 +93,8 @@ gcc -std=c99 -Wall prompt.c -o prompt
 	#include <editline/history.h>
 	int main(int argc, char** argv) 
 	{
-		puts("Lispy Version 0.1");
-	    puts("Press Ctrl+c to Exit\n");
+	    puts("Lispy Version 0.1");
+	  	puts("Press Ctrl+c to Exit\n");
 	
 	    while (1) 
 		{
@@ -108,10 +108,11 @@ gcc -std=c99 -Wall prompt.c -o prompt
 	        free(input);
 	    } 
 	    return 0;
-	}
-编写完毕后开始编译：
+	}  
 
-gcc -std=c99 -Wall prompt.c -ledit -o prompt
+编写完毕后开始编译：  
+
+	gcc -std=c99 -Wall prompt.c -ledit -o prompt
 
 
 五、预处理器
