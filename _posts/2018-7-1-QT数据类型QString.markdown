@@ -5,7 +5,7 @@ date: 2018-7-1 20:56:30
 group:   
 tags: QT  
 ---
-## 介绍  
+## 介绍 ##  
 QString 类是 Qt 中用于实现对字符串操作的类,与 std::string 用法类似.它在实现上有以下特征:
 1、字符串内部采用 Unicode(utf-16) 编码，可以表示世界上大多数语言的文字。
 2、QString类采用隐式共享技术，将深拷贝和浅拷贝有机地结合起来。(有关浅拷贝,深拷贝等知识:[请看](http://www.cnblogs.com/findumars/p/4690778.html))  
