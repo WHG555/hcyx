@@ -5,11 +5,11 @@ date: 2018-7-1 20:56:30
 group:   
 tags: QT  
 ---
-##介绍  
+## 介绍  
 QString 类是 Qt 中用于实现对字符串操作的类,与 std::string 用法类似.它在实现上有以下特征:
 1、字符串内部采用 Unicode(utf-16) 编码，可以表示世界上大多数语言的文字。
 2、QString类采用隐式共享技术，将深拷贝和浅拷贝有机地结合起来。(有关浅拷贝,深拷贝等知识:[请看](http://www.cnblogs.com/findumars/p/4690778.html))  
-###相关的类  
+### 相关的类  
 	QChar：表示一个Unicode编码的字符,详细用法：请看  
 	QByteArray：相当于是QChar的一个vector<>,详细用法：请看  
 	QStringRef：是对QString一部分的一个引用,作了一些优化,详细用法：请看  
@@ -17,7 +17,7 @@ QString 类是 Qt 中用于实现对字符串操作的类,与 std::string 用法
 	QRegExp：对于正则表达式提供了丰富的操作，详细用法：请看  
 	QTextCodec：提供QString与不同编码的字符串之间的转换，详细用法：请看  
 
-###构造  
+### 构造  
 	Qstring();// 构造null字符串
 	QString(QChar ch);// 由 QChar对象ch构造  
 	QString(const QChar *unicode, int size = -1);// 由QChar数组构造，size是数组大小
@@ -25,7 +25,7 @@ QString 类是 Qt 中用于实现对字符串操作的类,与 std::string 用法
 	QString(const QString &other);// 拷贝构造函数  
 	QString(const char *str);// 由c风格字符串 str 构造  
 
-###数值转化  
+### 数值转化  
 	double toDouble(bool *ok = 0) const; // 转换为高精度浮点数  
 	float toFloat(bool *ok = 0) const; // 转换为浮点数  
 	int toInt(bool *ok, int base = 10) const; // 转换为整型数  
@@ -46,7 +46,7 @@ num -> str    将数字转化为字符串并赋给QString对象,base是转化后
 	QString &setNum(double n, char format = 'g', int precision = 6); // 高精度浮点数  
 	QString &setNum(float n, char format = 'g', int precision = 6); // 浮点数  
 
-###格式化字符串  
+### 格式化字符串  
 **C++中用printf,sprintf等函数来格式化字符串,QString中也有相应的函数来实现,如下:**
 1.QString::sprintf() ,用法和C++中的sprintf()差不多,示例如下:
 
@@ -70,7 +70,7 @@ num -> str    将数字转化为字符串并赋给QString对象,base是转化后
 	
 	//感觉arg()似乎比sprintf()更好用些...
 
-###查找  
+### 查找  
 **在本字符串上查找是否出现了作为参数传递的字符串或QRegExp正则表达式**  
 
 	//从前向后查找到第一个符合条件的字符串的位置,,没有返回-1,from可指定开始查找的位置
@@ -90,7 +90,7 @@ num -> str    将数字转化为字符串并赋给QString对象,base是转化后
 	bool contains(QChar ch, Qt::CaseSensitivity cs = Qt::CaseSensitive) const;
 	bool contains(const QRegExp & rx) const;
 
-###添加  
+### 添加  
 
 	QString &append(const QString & str); // 向末尾添加 QString 对象
 	QString &append(const QChar * str, int len); //...QChar* 型字符串
@@ -108,11 +108,11 @@ num -> str    将数字转化为字符串并赋给QString对象,base是转化后
 	
 	//Ps：也可以用 push_back() 和 push_front() 函，或者直接用重载操作符 +=  
 
-###插入  
+### 插入  
 	QString &insert(int position, const QString & str); //向指定的position位置插入一个 QString 对象
 	QString &insert(int position, const QChar * unicode, int size); //同上
 	QString &insert(int position, QChar ch); //同上  
-###替换  
+### 替换  
 	QString &replace(int position, int n, const QString & after) //从position位置开始将原QString中的n个字符替换为after中的n个字符
 	QString &replace(int position, int n, const QChar * unicode, int size); //同上
 	QString &replace(int position, int n, QChar after); //同上
@@ -121,7 +121,7 @@ num -> str    将数字转化为字符串并赋给QString对象,base是转化后
 	QString &replace(QChar ch, const QString & after, Qt::CaseSensitivity cs = Qt::CaseSensitive); //同上
 	QString &replace(QChar before, QChar after, Qt::CaseSensitivity cs = Qt::CaseSensitive); //同上
 	QString &replace(const QRegExp & rx, const QString & after); //在元QString中匹配正则表达式rx,然后替换为after  
-###分割  
+### 分割  
 **简单分割**  
 
 	QString left(int n) const; // 分割得到前n个字符构成的子字符串
