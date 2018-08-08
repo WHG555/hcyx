@@ -172,17 +172,18 @@ SF是---,***中间不可加空格
 GP是可以在中间插空格的
 SF无法将<xiazhichao75@126.com>解释成email
 新手驾到，如有不足之处，还请指点，大家共同进步。
+##空格##
+在中文输入法的情况下：ｓｈｉｆｔ＋空格键切换至全角模式，　之后再按空格键，那么空格键就会生效。  
+添加
 
+	&#160;
+或者  
+
+	&nbsp;
+注意：分号是英文状态下的！
+
+***
 参考链接 
 http://kramdown.gettalong.org/converter/kramdown.html
 http://daringfireball.net/projects/markdown/syntax
 2016年03月05日发布
-新浪微博微信TwitterFacebook
-赞  |   1 收藏  |  2
-
- 
-你可能感兴趣的文章
-
-Markdown的各种扩展 17 收藏，10.2k 浏览
-像极客一样写作 1 收藏，302 浏览
-Node.js 转换 Markdown 并且语法高亮 445 浏览
